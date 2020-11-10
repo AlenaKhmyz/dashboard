@@ -11,6 +11,32 @@
     font-weight: $bold;
 }
 
+@mixin interlineation {
+    font-family: $lato;
+    font-size: $small;
+    font-weight: $regular;
+}
+
+@mixin caption {
+    font-family: $lato;
+    font-size: $medium;
+    font-weight: $normal;
+}
+
+@mixin statics {
+    font-family: $lato;
+    font-size: $big;
+    font-weight: $bold;
+}
+
+@mixin gradient {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: $gradient_orange;
+}
+
+
 @mixin mobile {
     @media (max-width: $mobile) {
         @content;

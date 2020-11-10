@@ -1,40 +1,135 @@
 .header {
-    max-width: 100%;
-    height: calc(150px + 1vh);
-    background: blue;
+  max-width: 100%;
+  background: blue;
 
-    &__head {
-      .header__menu {
-        @include head;
-        flex: auto;
-        margin: 0;
+  &__head {
+    .header__menu {
+      @include head;
+      flex: auto;
+      margin: 0;
+      border: 1px $black;
 
-        .header__item {
-          width: 4em;
-          height: 4.8em;
-          border-right: 1px $black;
+      .header__item {
+        width: 4em;
+        height: 4.8em;
+        border-right: 1px $black;
         }
 
-        .header__sign {
-          padding: 1em;
-          margin-top: 1em;
-        }
+      .header__sign {
+        padding: 1em;
+        margin-top: 1em;
+  
       }
+    }
 
-      .form-search {
-        margin: 1em 9em;
-        padding: 0.3em 2em;
-        display: inline-block;
-        border: 1px solid;
-        border-radius: 30%;
-      }
+    .form-search {
+      margin: 1em 9em;
+      padding: 0.3em 4em;
+      display: inline-block;
+      border: 1px solid;
+      border-radius: 30%;
+    }
      
-      .form-search input {
-        all: unset;
-        padding: 5px 0 5px 25px;
-        background: url('http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s25/search.png') no-repeat scroll 0 50%; 
+    .form-search input {
+      all: unset;
+      padding: 5px 0 5px 25px;
+      background: url('http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s25/search.png') no-repeat scroll 0 50%; 
+    }
+
+    .header__person {
+      .header__avatar {
+        height: 100%;
+        margin-left: 2em;
+      }
+
+      .header__signature {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2em;
+        margin-right: 4.2em;
+
+        .header__title {
+          color: $gradient_pink;
+          @include alias;
+        }
+
+        .header__text {
+          margin-top: -1em;
+          @include interlineation;
+          color: $grey;
+        }
       }
 
       @include head;
     }
+
+    .header__humburger {
+      position: absolute;
+      display: none;
+      width: 50px;
+      height: 2px;
+      background-color: $grey;
+    }
+
+    .header__humburger::before {
+      position: absolute;
+      top: 7px;
+      content: '';
+      width: 50px;
+      height: 2px;
+      background-color: $grey;
+    }
+    
+    .header__humburger::after {
+      position: absolute;
+      top: -7px;
+      content: '';
+      width: 50px;
+      height: 2px;
+      background-color: $grey;
+    }
+    
+    @include head;
+  }
+
+  &__statics {
+    @include head;
+    flex: auto;
+    
+    .header__lists{
+      max-width: 90%;
+      text-align: left;
+      @include head;
+
+      .header__value {
+        padding-left: 4em;
+
+        .caption {
+          @include caption;
+          color: $grey;
+        }
+
+        .statics {
+          @include statics;
+          @include gradient;
+        }
+
+        .result {
+          @include interlineation;
+          color: $grey;
+        }
+      }
+    }
+
+    .header__button{
+      border: none;
+      margin: 3%;
+
+      .button__text {
+        @include gradient;
+        @include alias;
+      }
+    }
+    
+  }
 }
