@@ -415,16 +415,26 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 1em;
-  margin-bottom: 2em;
+  padding-left: 1em;
+  padding-bottom: 2em;
   list-style-type: none;
   cursor: pointer;
+}
+
+.nav__num:hover {
+  display: inline-block;
+  -webkit-transform: translateXY(-50%, -50%);
+          transform: translateXY(-50%, -50%);
+  border-top: 1em solid transparent;
+  border-bottom: 1em solid transparent;
+  border-right: 2em solid #7d1a02;
+  background: #7d1a02;
 }
 
 .nav__button {
   font-family: "Lato";
   font-weight: 400;
-  font-size: calc(10px + 0.5vw);
+  font-size: calc(5px + 0.5vw);
   text-align: center;
   text-decoration: none;
   color: #FFFFFF;
@@ -483,6 +493,65 @@ textarea {
   max-width: 100%;
   height: calc(150px + 1vh);
   background: blue;
+}
+
+.header__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header__head .header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  margin: 0;
+}
+
+.header__head .header__menu .header__item {
+  width: 4em;
+  height: 4.8em;
+  border-right: 1px #0000;
+}
+
+.header__head .header__menu .header__sign {
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.header__head .form-search {
+  margin: 1em 9em;
+  padding: 0.3em 2em;
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 30%;
+}
+
+.header__head .form-search input {
+  all: unset;
+  padding: 5px 0 5px 25px;
+  background: url("http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s25/search.png") no-repeat scroll 0 50%;
 }
 
 .main {

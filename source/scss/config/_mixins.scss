@@ -1,4 +1,15 @@
+@mixin head {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
 
+@mixin alias {
+    font-family: $lato;
+    font-size: $medium;
+    font-weight: $bold;
+}
 
 @mixin mobile {
     @media (max-width: $mobile) {
