@@ -1,6 +1,83 @@
 .nav {
+    display: flex;
+    flex-direction: column;
     height: 1000px;
     width: 6%;
-    background: yellow;
-    
+    background: $gradient_orange;
+
+    &__logo  {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: calc(8px + 0.5vw);
+        padding-left: calc(17px + 0.5vw);
+        padding-bottom: calc(8px + 0.5vw);
+        font-size: calc(30px + 1vw);
+        background-color: $white;
+        color: $soft_red;
+    }
+
+    &__num {
+        justify-content: center;
+        margin-left: 1em;
+        margin-bottom: 2em;
+        list-style-type: none;
+        cursor: pointer;
+    }
+
+    &__button {
+        font-family: $lato;
+        font-weight: $regular;
+        font-size: $small;
+        text-align: center;
+        text-decoration: none;
+        color: $white;
+    }
+
+    &__icon {
+        margin: 1em;
+    }
+
+    &__power-button {
+        margin-top: 18em;
+        background: none;
+        border: none;
+    }
+
+    .humburger {
+        position: absolute;
+        display: none;
+        width: 20px;
+        height: 4px;
+        right: 20px;
+        top: 20px;
+        background-color: $black;
+    }
+     
+    .humburger:before {
+        position: absolute;
+        content:'';
+        top: 10px;
+        width: 20px;
+        height: 4px;
+        background-color: $black;
+    }
+     
+    .humburger:after {
+        position: absolute;
+        content: '';
+        top: -10px;
+        width: 20px;
+        height: 4px;
+        background-color: $black;
+    }
+
+    .humburger {
+        @include mobile {
+            display: flex;
+            position: fixed;
+            top: 10%;
+            right: 5%;
+        }
+    }
 }
+

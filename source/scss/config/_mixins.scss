@@ -1,4 +1,7 @@
-@mixin button {
-    flex-direction: column;
-    
-}
+
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }    
+} 
