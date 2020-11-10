@@ -1,1 +1,41 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+.baseLayout {
+  width: 100%;
+}
+
+.header {
+  margin-left: 6%;
+}
+
+.nav {
+  margin-top: -154px;
+}
+
+.aside {
+  margin-top: -845.5px;
+  margin-left: 1230px;
+}
+
+.nav {
+  height: 1000px;
+  width: 6%;
+  background: yellow;
+}
+
+.header {
+  max-width: 100%;
+  height: calc(150px + 1vh);
+  background: blue;
+}
+
+.main {
+  width: 50%;
+  height: 70%;
+  background: purple;
+}
+
+.aside {
+  width: 273px;
+  height: 841px;
+  background: green;
+}
+/*# sourceMappingURL=main.css.map */

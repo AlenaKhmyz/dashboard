@@ -1,8 +1,14 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "ACAA,AAAA,WAAW,CAAC;EACR,KAAK,EAAE,IAAI;CACd;;AAED,AAAA,OAAO,CAAC;EACJ,WAAW,EAAE,EAAE;CAClB;;AAED,AAAA,IAAI,CAAC;EACD,UAAU,EAAE,MAAM;CACrB;;AAED,AAAA,MAAM,CAAC;EACH,UAAU,EAAE,QAAQ;EACpB,WAAW,EAAE,MAAM;CACtB;;ACfD,AAAA,IAAI,CAAC;EACD,MAAM,EAAE,MAAM;EACd,KAAK,EAAE,EAAE;EACT,UAAU,EAAE,MAAM;CAErB;;ACLD,AAAA,OAAO,CAAC;EACJ,SAAS,EAAE,IAAI;EACf,MAAM,EAAE,iBAAiB;EACzB,UAAU,EAAE,IAAI;CACnB;;ACJD,AAAA,KAAK,CAAC;EACF,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,GAAG;EACX,UAAU,EAAE,MAAM;CACrB;;ACJD,AAAA,MAAM,CAAC;EACH,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,KAAK;CACpB",
     "sources": [
-        "../scss/main.scss"
+        "../scss/main.scss",
+        "../scss/components/_baseLayout.scss",
+        "../scss/components/_nav.scss",
+        "../scss/components/_header.scss",
+        "../scss/components/_main.scss",
+        "../scss/components/_aside.scss",
+        "../scss/components/_footer.scss"
     ],
     "names": [],
     "file": "main.css"
