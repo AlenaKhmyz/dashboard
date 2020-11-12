@@ -6,12 +6,8 @@
     width: 100%;
     height: 100%;
 
-    @include mobile {
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    }
+    @include mobile;
+    
 }
 
 .aside{
