@@ -540,7 +540,6 @@ textarea {
       -ms-flex: auto;
           flex: auto;
   margin: 0;
-  border: 1px #0000;
 }
 
 .header__head .header__menu .header__item {
