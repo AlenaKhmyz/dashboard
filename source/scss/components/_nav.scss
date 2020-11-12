@@ -1,3 +1,5 @@
+
+
 .nav {
     display: flex;
     flex-direction: column;
@@ -8,10 +10,7 @@
     &__logo  {
         width: 100%;
         margin: 0 auto;
-        padding-top: calc(8px + 0.5vw);
-        padding-left: calc(17px + 0.5vw);
-        padding-bottom: calc(8px + 0.5vw);
-        font-size: calc(30px + 1vw);
+        font-size: 3.7em;
         background-color: $white;
         color: $soft_red;
     }
@@ -90,4 +89,3 @@
         }
     }
 }
-

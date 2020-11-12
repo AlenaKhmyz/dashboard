@@ -1,4 +1,55 @@
 .aside {
-    width: 273px;
-    background: green;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   flex-wrap: wrap;
+   
+   &__buttons {
+       @include head;
+       width: 100%;
+       justify-content: space-between;
+       flex-wrap: nowrap;
+       border: 1px black;
+        @include gradient;
+
+       .aside__num {
+        padding: 1em;
+       }
+    }
+
+    .profile__avatar {
+        @include head;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        .profile__photo {
+            margin: 1em;
+        }
+        .profile__text {
+            flex-direction: column;
+            text-align: start;
+
+            .profile__title {
+                @include alias;
+                margin: 0 auto;
+            }
+            
+            .profile__signeture {
+                @include interlineation;
+                color: $grey;
+            }
+        }
+    }
+
+    .aside-search {
+        padding: 0.3em 4em;
+        display: inline-block;
+        border-bottom: 1px solid;
+      }
+       
+      .aside-search input {
+        all: unset;
+        padding: 5px 0 5px 25px;
+        background: url('http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s25/search.png') no-repeat scroll 0 50%; 
+    }
+
 }

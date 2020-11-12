@@ -3,6 +3,7 @@
 @import './config/reset';
 @import './config/variables';
 @import './config/mixins';
+@import './config/fonts';
 
 // Components
 @import './components/baseLayout';
@@ -10,5 +11,5 @@
 @import './components/header';
 @import './components/main';
 @import './components/aside';
-@import './components/footer';
+@import './components/wrap';
 
