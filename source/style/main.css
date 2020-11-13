@@ -509,6 +509,7 @@ textarea {
 }
 
 .header__head {
+  border-bottom: 1px solid #F1F1F1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -544,30 +545,35 @@ textarea {
 
 .header__head .header__menu .header__item {
   width: 4em;
-  height: 4.8em;
-  border-right: 1px #0000;
+  height: 4.5em;
+  border-right: 1px solid #F1F1F1;
 }
 
 .header__head .header__menu .header__sign {
-  padding: 1em;
-  margin-top: 1em;
+  padding: 1.7em 1em 1.4em;
+}
+
+.header__head .header__search {
+  border-right: 1px solid #F1F1F1;
 }
 
 .header__head .form-search {
   margin: 1em 9em;
   padding: 0.3em 4em;
   display: inline-block;
-  border: 1px solid;
-  border-radius: 30%;
+  border: 1px solid #F1F1F1;
+  border-radius: 30px;
 }
 
 .header__head .form-search input {
   all: unset;
   padding: 5px 0 5px 25px;
+  color: #F1F1F1;
   background: url("http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s25/search.png") no-repeat scroll 0 50%;
 }
 
 .header__head .header__person {
+  margin: 0 1.35em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -584,7 +590,6 @@ textarea {
 
 .header__head .header__person .header__avatar {
   height: 100%;
-  margin-left: 2em;
 }
 
 .header__head .header__person .header__signature {
@@ -595,8 +600,7 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 2em;
-  margin-right: 4.2em;
+  margin: 1em 2em 0 2em;
 }
 
 .header__head .header__person .header__signature .header__title {
@@ -607,37 +611,41 @@ textarea {
 }
 
 .header__head .header__person .header__signature .header__text {
-  margin-top: -1em;
   font-family: "Lato";
   font-size: calc(5px + 0.5vw);
   font-weight: 400;
   color: #BFBFBF;
+  padding-top: 5px;
 }
 
 .header__head .header__humburger {
   position: absolute;
-  width: 50px;
-  height: 2px;
-  right: 100px;
-  top: 500px;
+  width: 6px;
+  height: 6px;
+  left: 93%;
+  top: 2em;
+  border: 1px solid #BFBFBF;
+  border-radius: 50%;
   background-color: #BFBFBF;
 }
 
 .header__head .header__humburger::before {
   position: absolute;
-  top: 7px;
+  top: 11px;
   content: '';
-  width: 50px;
-  height: 2px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
   background-color: #BFBFBF;
 }
 
 .header__head .header__humburger::after {
   position: absolute;
-  top: -7px;
+  top: -11px;
   content: '';
-  width: 50px;
-  height: 2px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
   background-color: #BFBFBF;
 }
 
