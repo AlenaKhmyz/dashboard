@@ -1,6 +1,5 @@
 .header {
   max-width: 100%;
-  background: blue;
 
   &__head {
     border-bottom: 1px solid #F1F1F1;
@@ -104,6 +103,7 @@
   &__statics {
     @include head;
     flex: auto;
+    padding: 1em;
     
     .header__lists{
       max-width: 90%;
@@ -119,11 +119,13 @@
         }
 
         .statics {
+          margin-top: 0.5em;
           @include statics;
           @include gradient;
         }
 
         .result {
+          margin-top: 0.5em;
           @include interlineation;
           color: $grey;
         }
@@ -132,7 +134,8 @@
 
     .header__button{
       border: none;
-      margin: 3%;
+      margin: 1em;
+      background: $white;
 
       .button__text {
         @include gradient;
