@@ -545,6 +545,7 @@ textarea {
 .header__head .header__menu .header__item {
   width: 4em;
   height: 4.5em;
+  padding: 1em;
   border-right: 1px solid #F1F1F1;
 }
 
