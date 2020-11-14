@@ -1,55 +1,154 @@
 .aside {
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
    display: flex;
    flex-direction: column;
    align-items: flex-start;
    flex-wrap: wrap;
+   width: 30%;
    
    &__buttons {
        @include head;
+       @include mobile {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
        width: 100%;
        justify-content: space-between;
        flex-wrap: nowrap;
        border: 1px black;
-        @include gradient;
+       background: $gradient_orange;
 
        .aside__num {
-        padding: 1em;
+        padding: 1em 2em 1em 2em;
        }
+
+       .aside__num:hover {
+        background: $dark_red;
+       }
+
+        &:nth-child(ln + 2):after {
+            content:'';
+            position: absolute;
+            top: 30px;
+            left: 70px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #000;
+        }
+    }
+    
+    &__profiles {
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+        
+        margin-left: 1em;
     }
 
     .profile__avatar {
         @include head;
         flex-wrap: nowrap;
-        justify-content: space-between;
+        border-bottom: 1px solid $grey;
         .profile__photo {
             margin: 1em;
         }
         .profile__text {
             flex-direction: column;
-            text-align: start;
+            padding: 1em 0;
 
             .profile__title {
                 @include alias;
-                margin: 0 auto;
             }
             
             .profile__signeture {
                 @include interlineation;
+                margin: 0.5em 0;
                 color: $grey;
             }
+        }
+
+        .chat {
+            margin: 1em;
         }
     }
 
     .aside-search {
-        padding: 0.3em 4em;
+        @include mobile {
+            width: 100%;
+        }
+        padding: 0.7em 0.79em;
         display: inline-block;
-        border-bottom: 1px solid;
-      }
+        border-bottom: 1px solid $grey;
+        background-color: #FCFCFC;
+    }
        
-      .aside-search input {
+    .aside-search input {
         all: unset;
         padding: 5px 0 5px 25px;
         background: url('http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s25/search.png') no-repeat scroll 0 50%; 
     }
 
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__title {
+            @include alias;
+            margin-top: 2em;
+            text-transform: capitalize;
+        }
+
+        .network {
+            margin: 1em 1em 0;
+            width: 70%;
+            flex-direction: row;
+            @include head;
+
+            .network__logo {
+                margin: 0.5em;
+                &--radio {
+                    @include logo;
+                    @include gradient-purple;
+                }
+
+                &--vimeo {
+                    @include logo;
+                    @include gradient-green;
+                }
+
+                &--css {
+                    @include logo;
+                    @include gradient-yellow;
+                }
+
+                &--deviantart {
+                    @include logo;
+                    @include gradient-blue;
+                }
+
+                &--vk {
+                    @include logo;
+                    @include gradient-sky;
+                }
+
+                &--xing {
+                    @include logo;
+                    @include gradient-gold;
+                }
+
+            }
+        }
+    }
 }
