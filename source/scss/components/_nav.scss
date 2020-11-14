@@ -27,6 +27,7 @@
     }
 
     &__num {
+        position: relative;
         padding-bottom: 2em;
         text-align: center;
         padding-bottom: 2em;
@@ -36,18 +37,15 @@
 
     &__num:hover {
         background: $dark_red;
+    }
 
-        &:nth-child(ln + 2):after {
-            content:'';
-            position: absolute;
-            top: 30px;
-            left: 70px;
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-top: 10px solid #000;
-        }
+    &__num:hover::after {
+        position: absolute;
+        content: '';
+        top: calc(50% - 7px);
+        left: 100%;
+        border: 7px solid transparent;
+        border-left: 6px solid $dark_red;
     }
 
     
