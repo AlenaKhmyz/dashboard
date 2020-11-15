@@ -73,8 +73,9 @@
 .humburger {
     position: absolute;
     display: none;
-    width: 20px;
-    height: 4px;
+    margin: 2em 0.5em;
+    width: 5px;
+    height: 5px;
     background-color: $grey;
 }
  
@@ -82,8 +83,8 @@
     position: absolute;
     content:'';
     top: 10px;
-    width: 20px;
-    height: 4px;
+    width: 5px;
+    height: 5px;
     background-color: $grey;
 }
  
@@ -91,8 +92,8 @@
     position: absolute;
     content: '';
     top: -10px;
-    width: 20px;
-    height: 4px;
+    width: 5px;
+    height: 5px;
     background-color: $grey;
 }
 

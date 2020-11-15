@@ -489,7 +489,7 @@ textarea {
 .humburger {
   position: absolute;
   display: none;
-  margin: 2em 0.5em;
+  top: 2em;
   width: 5px;
   height: 5px;
   background-color: #BFBFBF;
@@ -1182,6 +1182,7 @@ textarea {
   .project {
     width: 90%;
     margin: 1em;
+    background-color: #fd7858;
   }
 }
 
@@ -1233,7 +1234,6 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background-color: #BFBFBF;
 }
 
 .project .project__value .progress {
@@ -1431,18 +1431,6 @@ textarea {
 
 .aside__buttons .aside__num:hover {
   background: #7d1a02;
-}
-
-.aside__buttons:nth-child(ln + 2):after {
-  content: '';
-  position: absolute;
-  top: 30px;
-  left: 70px;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid #000;
 }
 
 .aside__profiles {
