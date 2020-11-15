@@ -813,6 +813,16 @@ textarea {
   padding-left: 4em;
 }
 
+@media (max-width: 768px) {
+  .header__statics .header__lists .header__value {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#FD5372), to(#fa8a74));
+    background-image: linear-gradient(to top, #FD5372, #fa8a74);
+  }
+}
+
 .header__statics .header__lists .header__value .caption {
   font-family: "Lato";
   font-size: calc(8px + 0.5vw);
@@ -1197,6 +1207,7 @@ textarea {
   .project {
     width: 90%;
     margin: 1em;
+    background: #fd7858;
   }
 }
 
@@ -1249,6 +1260,12 @@ textarea {
       -ms-flex-direction: row;
           flex-direction: row;
   background-color: #BFBFBF;
+}
+
+@media (max-width: 768px) {
+  .project .project__value {
+    background: #fd7858;
+  }
 }
 
 .project .project__value .progress {

@@ -204,6 +204,7 @@
         @include mobile {
             width: 90%;
             margin: 1em;
+            background: $soft_red;  
         }
         
         .project__tasks {
@@ -236,6 +237,10 @@
         }
 
         .project__value {
+            @include mobile {
+                background: $soft_red;  
+            }
+
             display: flex;
             flex-direction: row;
             background-color: $grey;
