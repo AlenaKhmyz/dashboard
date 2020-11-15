@@ -43,6 +43,13 @@
     background-image: $gradient_purple;
 }
 
+@mixin gradient-yellow-text {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: $gradient_yellow;
+}
+
 @mixin logo {
     height: 4em;
     width: 4em;

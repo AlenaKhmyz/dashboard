@@ -702,10 +702,25 @@ textarea {
 }
 
 .header__head .header__person .header__signature .header__title {
-  color: linear-gradient(to left, #FEBAC6, #FD6F8C);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#FD5372), to(#fa8a74));
+  background-image: linear-gradient(to top, #FD5372, #fa8a74);
   font-family: "Lato";
   font-size: calc(8px + 0.5vw);
   font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  .header__head .header__person .header__signature .header__title {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#B5727A), to(#F2B496));
+    background-image: linear-gradient(to top, #B5727A, #F2B496);
+    font-size: calc(18px + 1vw);
+  }
 }
 
 .header__head .header__person .header__signature .header__text {

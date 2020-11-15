@@ -33,7 +33,7 @@
         padding: 1.7em 1em 1.4em;
       }
     }
-    
+
     .header__search {
       @include mobile {
        border: none;
@@ -96,7 +96,11 @@
       
 
         .header__title {
-          color: $gradient_pink;
+          @include mobile {
+            @include gradient-yellow-text;
+            font-size: calc(18px + 1vw);
+          }
+          @include gradient;
           @include alias;
         }
 
