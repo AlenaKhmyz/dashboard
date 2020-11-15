@@ -471,7 +471,7 @@ textarea {
 .nav__button {
   font-family: "Lato";
   font-weight: 400;
-  font-size: calc(5px + 0.5vw);
+  font-size: calc(3px + 0.5vw);
   text-decoration: none;
   color: #FFFFFF;
 }
@@ -709,7 +709,7 @@ textarea {
 
 .header__head .header__person .header__signature .header__text {
   font-family: "Lato";
-  font-size: calc(5px + 0.5vw);
+  font-size: calc(3px + 0.5vw);
   font-weight: 400;
   color: #BFBFBF;
   padding-top: 5px;
@@ -819,7 +819,7 @@ textarea {
 .header__statics .header__lists .header__value .result {
   margin-top: 0.5em;
   font-family: "Lato";
-  font-size: calc(5px + 0.5vw);
+  font-size: calc(3px + 0.5vw);
   font-weight: 400;
   color: #BFBFBF;
 }
@@ -1012,7 +1012,7 @@ textarea {
 .indicators .index .index__result {
   padding: 5em 4em 3em 5em;
   font-family: "Lato";
-  font-size: calc(5px + 0.5vw);
+  font-size: calc(3px + 0.5vw);
   font-weight: 400;
   color: #BFBFBF;
 }
@@ -1055,7 +1055,7 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
+  width: 45%;
   margin: 1em 1em 1em 2.7em;
   background-color: #FFFFFF;
 }
@@ -1091,7 +1091,7 @@ textarea {
 
 .customers .customers__feed .person__avatar {
   font-family: "Lato";
-  font-size: calc(5px + 0.5vw);
+  font-size: calc(3px + 0.5vw);
   font-weight: 400;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1119,7 +1119,7 @@ textarea {
 
 .customers .customers__feed .person__text {
   font-family: "Lato";
-  font-size: calc(5px + 0.5vw);
+  font-size: calc(3px + 0.5vw);
   font-weight: 400;
   margin: 3em 2em;
   padding: 1em;
@@ -1153,7 +1153,7 @@ textarea {
 
 .customers .customers__text .sophie__text {
   font-family: "Lato";
-  font-size: calc(5px + 0.5vw);
+  font-size: calc(3px + 0.5vw);
   font-weight: 400;
   padding: 1em;
   margin: 2em 2em;
@@ -1165,6 +1165,194 @@ textarea {
 
 .customers .customers__text .sophie__text .name {
   color: #777777;
+}
+
+.project {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 1em;
+  width: 45%;
+  background-color: #BFBFBF;
+}
+
+@media (max-width: 768px) {
+  .project {
+    width: 90%;
+    margin: 1em;
+  }
+}
+
+.project .project__tasks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #FFFFFF;
+}
+
+.project .project__tasks .project__task-checkbox-element {
+  padding: 1em;
+  margin-right: 2em;
+  border-top: 1px solid #ededed;
+}
+
+.project .project__tasks .project__task-checkbox-element .project__task-checkbox-title {
+  font-family: "Lato";
+  font-size: calc(10px + 0.5vw);
+  font-weight: 900;
+  font-size: 15px;
+  color: #fd7858;
+}
+
+.project .project__tasks .project__task-checkbox-element .project__task-checkbox-text {
+  font-family: "Lato";
+  font-size: calc(3px + 0.5vw);
+  font-weight: 400;
+  color: #bfbfbf;
+}
+
+.project .project__tasks .project__task-checkbox-element .project__task-checkbox-time {
+  padding-left: 1.5em;
+  font-family: "Lato";
+  font-size: calc(3px + 0.5vw);
+  font-weight: 400;
+  color: #9C9C9C;
+}
+
+.project .project__value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #BFBFBF;
+}
+
+.project .project__value .progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 0.5em;
+  width: 50%;
+  background-color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .project .project__value .progress {
+    width: 90%;
+    margin: 0.5em;
+  }
+}
+
+.project .project__value .progress__title {
+  font-family: "Lato";
+  font-size: calc(8px + 0.5vw);
+  font-weight: 700;
+  padding: 2em 5em 4em;
+  color: #767676;
+}
+
+@media (max-width: 768px) {
+  .project .project__value .progress__title {
+    margin: 0 auto 5em;
+  }
+}
+
+.project .project__value .progress .progress__value {
+  font-family: "Lato";
+  font-size: calc(10px + 0.5vw);
+  font-weight: 900;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#705CB8), to(#BB80E3));
+  background-image: linear-gradient(to top, #705CB8, #BB80E3);
+  margin: 1em 4em 0;
+}
+
+.project .project__value .progress .project__result {
+  padding: 3.1em 6em 0.5em;
+  font-family: "Lato";
+  font-size: calc(3px + 0.5vw);
+  font-weight: 400;
+  color: #BFBFBF;
+}
+
+@media (max-width: 768px) {
+  .project .project__value .progress .project__result {
+    margin: 0 auto;
+  }
+}
+
+.project .project__value .shipments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0.5em;
+  width: 50%;
+  background-color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .project .project__value .shipments {
+    width: 90%;
+    margin: 0.5em;
+  }
+}
+
+.project .project__value .shipments__title {
+  font-family: "Lato";
+  font-size: calc(8px + 0.5vw);
+  font-weight: 700;
+  padding: 2em 5em 4em;
+  color: #767676;
+}
+
+@media (max-width: 768px) {
+  .project .project__value .shipments__title {
+    margin: 0 auto 5em;
+  }
+}
+
+.project .project__value .shipments .shipments__value {
+  font-family: "Lato";
+  font-size: calc(10px + 0.5vw);
+  font-weight: 900;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#FD5372), to(#fa8a74));
+  background-image: linear-gradient(to top, #FD5372, #fa8a74);
+  margin: 1em 4em 0;
+}
+
+.project .project__value .shipments .shipments__result {
+  padding: 3.1em 6em 0.5em;
+  font-family: "Lato";
+  font-size: calc(3px + 0.5vw);
+  font-weight: 400;
+  color: #BFBFBF;
+}
+
+@media (max-width: 768px) {
+  .project .project__value .shipments .shipments__result {
+    margin: 0 auto;
+  }
 }
 
 .aside {
@@ -1320,7 +1508,7 @@ textarea {
 
 .aside .profile__avatar .profile__text .profile__signeture {
   font-family: "Lato";
-  font-size: calc(5px + 0.5vw);
+  font-size: calc(3px + 0.5vw);
   font-weight: 400;
   margin: 0.5em 0;
   color: #BFBFBF;

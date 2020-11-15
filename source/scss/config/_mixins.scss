@@ -36,6 +36,13 @@
     background-image: $gradient_orange;
 }
 
+@mixin gradient-purple-text {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: $gradient_purple;
+}
+
 @mixin logo {
     height: 4em;
     width: 4em;
