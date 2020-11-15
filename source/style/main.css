@@ -1011,10 +1011,10 @@ textarea {
 }
 
 .indicators .index .index__result {
-  padding: 5em 4em 3em 5em;
   font-family: "Lato";
   font-size: calc(3px + 0.5vw);
   font-weight: 400;
+  padding: 5em 4em 3em 5em;
   color: #BFBFBF;
 }
 
@@ -1218,10 +1218,10 @@ textarea {
 }
 
 .project .project__tasks .project__task-checkbox-element .project__task-checkbox-time {
-  padding-left: 1.5em;
   font-family: "Lato";
   font-size: calc(3px + 0.5vw);
   font-weight: 400;
+  padding-left: 1.5em;
   color: #9C9C9C;
 }
 
@@ -1343,10 +1343,10 @@ textarea {
 }
 
 .project .project__value .shipments .shipments__result {
-  padding: 3.1em 6em 0.5em;
   font-family: "Lato";
   font-size: calc(3px + 0.5vw);
   font-weight: 400;
+  padding: 3.1em 6em 0.5em;
   color: #BFBFBF;
 }
 
@@ -1431,18 +1431,6 @@ textarea {
 
 .aside__buttons .aside__num:hover {
   background: #7d1a02;
-}
-
-.aside__buttons:nth-child(ln + 2):after {
-  content: '';
-  position: absolute;
-  top: 30px;
-  left: 70px;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid #000;
 }
 
 .aside__profiles {
@@ -1561,21 +1549,21 @@ textarea {
 }
 
 .aside .footer .network {
-  margin: 1em 1em 0;
-  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: row;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 1em 1em 0;
+  width: 70%;
+  flex-direction: row;
 }
 
 .aside .footer .network .network__logo {
