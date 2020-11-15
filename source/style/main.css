@@ -731,6 +731,14 @@ textarea {
   padding-top: 5px;
 }
 
+@media (max-width: 768px) {
+  .header__head .header__person .header__signature .header__text {
+    font-family: "Lato";
+    font-size: calc(8px + 0.5vw);
+    font-weight: 700;
+  }
+}
+
 .header__head .header__humburger {
   position: absolute;
   width: 6px;

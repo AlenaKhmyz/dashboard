@@ -105,6 +105,10 @@
         }
 
         .header__text {
+          @include mobile {
+            @include  caption;
+          }
+
           @include interlineation;
           color: $grey;
           padding-top: 5px;
