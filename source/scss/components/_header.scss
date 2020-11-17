@@ -1,6 +1,6 @@
 .header {
   max-width: 100%;
-
+//header-head
   &__head {
     @include mobile {
       flex-wrap: wrap;
@@ -125,7 +125,7 @@
       }
     }
   }
-
+//header-statics
   &__statics {
     @include head;
     flex: auto;
