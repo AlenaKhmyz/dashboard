@@ -2,10 +2,15 @@
     @include mobile {
         flex-wrap: wrap;
         flex-direction: column;
+        width: 100%;
         background-color: $soft_red;
     }
-    width: 100%;
-    background: $grey;
+
+    width: 1070px;
+    margin: 0 auto;
+    padding: 2%;
+    box-sizing: border-box;
+    // background: $grey;
 }
 
 //indicators
@@ -16,10 +21,12 @@
         flex-direction: row;
         @include gradient;
     }
-
-    flex-wrap: nowrap;
     @include head;
-    
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
 //diagram
 
     .diagram {
@@ -29,11 +36,14 @@
             flex-wrap: nowrap;
             overflow: scroll;
             width: 90%;
+            height: 19em;
             margin: 0.5em;
         }
 
-        margin: 0.5em 0.5em 0.5em 2.7em;
-        width: 70%;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 703px;
+        height: 265px;
         background: url(../img/backgrounds/diagrams.png) no-repeat bottom;
         background-color: $white;
         &__title {
@@ -52,14 +62,12 @@
             .diagram__button {
                 @include caption;
                 margin: 0.5em;
+                border: 1px none;
                 border-radius: 20px;
                 border-color: #fd7858;
+                @include caption;
+                color: $grey;
                 background-color: $white;
-
-                .diagram__text {
-                    @include caption;
-                    color: $grey;
-                }
             }
 
             .diagram__button:hover {
@@ -78,8 +86,11 @@
 
         display: flex;
         flex-direction: column;
-        margin: 0.5em;
-        width: 20%;
+        margin-bottom: 2%;
+        margin-left: 2%;
+        box-sizing: border-box;
+        padding: 16px;
+        box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.13);
         background: url(../img/backgrounds/result.png) no-repeat center;
         background-color: $white;
 
@@ -89,7 +100,7 @@
             }
 
             @include caption;
-            padding: 2em 2em 5.6em;
+            padding: 20px 20px 100px;
             color: #767676;
         }
 
@@ -98,7 +109,7 @@
                 margin: 0 auto;
             }
             @include interlineation;
-            padding: 5em 4em 3em 5em;
+            padding: 60px 40px 30px 50px;
             color: $grey;
         }
     }
@@ -107,6 +118,11 @@
 //company
 .company {
     @include head;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
     @include mobile {
         flex-direction: column;
     }
@@ -114,15 +130,17 @@
 //customers 
     .customers {
         @include mobile {
-            width: 80%;
+            width: 85%;
+            height: 10em;
+            overflow: scroll;
             margin: 0 auto;
         }
 
         display: flex;
         flex-direction: column;
-       
+        height: 515px;
         width: 45%;
-        margin: 1em 1em 1em 2.7em;
+        overflow: scroll;
         background-color: $white;
 
         .title__customers {
@@ -160,6 +178,7 @@
                     width: 70%;
                     margin-left: 4em;
                 }
+                
                 @include interlineation;
                 margin: 3em 2em;
                 padding: 1em;
@@ -197,19 +216,25 @@
     }
 
     .project {
-        flex-direction: column;
-        margin-top: 1em;
-        width: 45%;
-        background-color: $grey;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        width: 55%;
         @include mobile {
-            width: 90%;
-            margin: 1em;
+            width: 85%;
+            margin: 0 auto;
             background: $soft_red;  
         }
         
         .project__tasks {
+            @include mobile {
+                width: 100%;
+                margin-top: 1em;
+            }
             display: flex;
             flex-direction: column;
+            width: 95%;
+            text-align: left;
             background-color: $white;
 
             .project__task-checkbox-element {
@@ -238,23 +263,28 @@
 
         .project__value {
             @include mobile {
+                width: 85%;
+                margin: 0 auto;
+                flex-wrap: wrap;
                 background: $soft_red;  
             }
 
             display: flex;
             flex-direction: row;
+            width: 95%;
             background-color: $grey;
 
             .progress {
                 @include mobile {
-                    width: 90%;
-                    margin: 0.5em;
+                    width: 85%;
+                    height: 20em;
                 }
         
                 display: flex;
                 flex-direction: column;
                 margin-top: 0.5em;
                 width: 50%;
+                height: 300px;
                 background-color: $white;
         
                 &__title {
@@ -263,14 +293,14 @@
                     }
         
                     @include caption;
-                    padding: 2em 5em 4em;
+                    padding: 20px 100px 50px;
                     color: #767676;
                 }
 
                 .progress__value {
                     @include statics;
                     @include gradient-purple-text;
-                    margin: 1em 4em 0;
+                    padding: 50px 80px 10px;
                 }
         
                 .project__result {
@@ -278,7 +308,7 @@
                         margin: 0 auto;
                     }
         
-                    padding: 3.1em 6em 0.5em;
+                    padding: 10px 90px;
                     @include interlineation;
                     color: $grey;
                 }
@@ -286,14 +316,16 @@
 
             .shipments {
                 @include mobile {
-                    width: 90%;
-                    margin: 0.5em;
+                    width: 85%;
+                    height: 20em;
+                    margin: 1em 0;
                 }
         
                 display: flex;
                 flex-direction: column;
-                margin: 0.5em;
+                margin: 0.5em 0 0.5em 0.5em;
                 width: 50%;
+                height: 300px;
                 background-color: $white;
         
                 &__title {
@@ -301,15 +333,15 @@
                         margin: 0 auto 5em;
                     }
         
-                    @include caption;
-                    padding: 2em 5em 4em;
+                    @include caption;          
+                    padding: 30px 70px;
                     color: #767676;
                 }
                 
                 .shipments__value {
                     @include statics;
                     @include gradient;
-                    margin: 1em 4em 0;
+                    padding: 55px 80px 10px;
                 }
         
                 .shipments__result {
@@ -317,7 +349,7 @@
                         margin: 0 auto;
                     }
                     @include interlineation;
-                    padding: 3.1em 6em 0.5em;
+                    padding: 10px 90px;
                     color: $grey;
                 }
 
@@ -325,8 +357,4 @@
             
         }
 
-
-    
-
- 
 }

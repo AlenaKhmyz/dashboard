@@ -402,6 +402,10 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: #BFBFBF;
 }
 
 @media (max-width: 768px) {
@@ -543,17 +547,14 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  width: 250px;
-  height: 100%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   height: 4.5em;
   border-bottom: 1px solid #F1F1F1;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 @media (max-width: 768px) {
@@ -606,6 +607,9 @@ textarea {
 }
 
 .header__head .header__search {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   border-right: 1px solid #F1F1F1;
 }
 
@@ -616,9 +620,13 @@ textarea {
 }
 
 .header__head .form-search {
-  margin: 1em 9em;
-  padding: 0.3em 4em;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
   border: 1px solid #F1F1F1;
   border-radius: 30px;
 }
@@ -775,6 +783,12 @@ textarea {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   max-width: 90%;
   text-align: left;
   -ms-flex-wrap: nowrap;
@@ -824,23 +838,19 @@ textarea {
 .header__statics .header__button {
   border: none;
   margin: 1em;
-  background: #FFFFFF;
-}
-
-.header__statics .header__button .button__text {
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#FD5372), to(#fa8a74));
-  background-image: linear-gradient(to top, #FD5372, #fa8a74);
+  color: #fd7858;
   font-family: "Lato";
   font-size: calc(8px + 0.5vw);
   font-weight: 900;
+  background: #FFFFFF;
 }
 
 .main {
-  width: 100%;
-  background: #BFBFBF;
+  width: 1070px;
+  margin: 0 auto;
+  padding: 2%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
@@ -851,13 +861,12 @@ textarea {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
     background-color: #fd7858;
   }
 }
 
 .indicators {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -870,6 +879,14 @@ textarea {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
 @media (max-width: 768px) {
@@ -901,8 +918,10 @@ textarea {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0.5em 0.5em 0.5em 2.7em;
-  width: 70%;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 703px;
+  height: 265px;
   background: url(../img/backgrounds/diagrams.png) no-repeat bottom;
   background-color: #FFFFFF;
 }
@@ -916,6 +935,7 @@ textarea {
         flex-wrap: nowrap;
     overflow: scroll;
     width: 90%;
+    height: 19em;
     margin: 0.5em;
   }
 }
@@ -954,16 +974,14 @@ textarea {
   font-size: calc(8px + 0.5vw);
   font-weight: 700;
   margin: 0.5em;
+  border: 1px none;
   border-radius: 20px;
   border-color: #fd7858;
-  background-color: #FFFFFF;
-}
-
-.indicators .diagram__buttons .diagram__button .diagram__text {
   font-family: "Lato";
   font-size: calc(8px + 0.5vw);
   font-weight: 700;
   color: #BFBFBF;
+  background-color: #FFFFFF;
 }
 
 .indicators .diagram__buttons .diagram__button:hover {
@@ -979,8 +997,13 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0.5em;
-  width: 20%;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 16px;
+  -webkit-box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.13);
+          box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.13);
   background: url(../img/backgrounds/result.png) no-repeat center;
   background-color: #FFFFFF;
 }
@@ -996,7 +1019,7 @@ textarea {
   font-family: "Lato";
   font-size: calc(8px + 0.5vw);
   font-weight: 700;
-  padding: 2em 2em 5.6em;
+  padding: 20px 20px 100px;
   color: #767676;
 }
 
@@ -1010,7 +1033,7 @@ textarea {
   font-family: "Lato";
   font-size: calc(3px + 0.5vw);
   font-weight: 400;
-  padding: 5em 4em 3em 5em;
+  padding: 60px 40px 30px 50px;
   color: #BFBFBF;
 }
 
@@ -1033,6 +1056,14 @@ textarea {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: flex-start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 @media (max-width: 768px) {
@@ -1052,14 +1083,17 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 515px;
   width: 45%;
-  margin: 1em 1em 1em 2.7em;
+  overflow: scroll;
   background-color: #FFFFFF;
 }
 
 @media (max-width: 768px) {
   .customers {
-    width: 80%;
+    width: 85%;
+    height: 10em;
+    overflow: scroll;
     margin: 0 auto;
   }
 }
@@ -1165,19 +1199,21 @@ textarea {
 }
 
 .project {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 1em;
-  width: 45%;
-  background-color: #BFBFBF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 55%;
 }
 
 @media (max-width: 768px) {
   .project {
-    width: 90%;
-    margin: 1em;
+    width: 85%;
+    margin: 0 auto;
     background: #fd7858;
   }
 }
@@ -1190,7 +1226,16 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 95%;
+  text-align: left;
   background-color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .project .project__tasks {
+    width: 100%;
+    margin-top: 1em;
+  }
 }
 
 .project .project__tasks .project__task-checkbox-element {
@@ -1230,11 +1275,16 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 95%;
   background-color: #BFBFBF;
 }
 
 @media (max-width: 768px) {
   .project .project__value {
+    width: 85%;
+    margin: 0 auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     background: #fd7858;
   }
 }
@@ -1249,13 +1299,14 @@ textarea {
           flex-direction: column;
   margin-top: 0.5em;
   width: 50%;
+  height: 300px;
   background-color: #FFFFFF;
 }
 
 @media (max-width: 768px) {
   .project .project__value .progress {
-    width: 90%;
-    margin: 0.5em;
+    width: 85%;
+    height: 20em;
   }
 }
 
@@ -1263,7 +1314,7 @@ textarea {
   font-family: "Lato";
   font-size: calc(8px + 0.5vw);
   font-weight: 700;
-  padding: 2em 5em 4em;
+  padding: 20px 100px 50px;
   color: #767676;
 }
 
@@ -1282,11 +1333,11 @@ textarea {
   background-clip: text;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#705CB8), to(#BB80E3));
   background-image: linear-gradient(to top, #705CB8, #BB80E3);
-  margin: 1em 4em 0;
+  padding: 50px 80px 10px;
 }
 
 .project .project__value .progress .project__result {
-  padding: 3.1em 6em 0.5em;
+  padding: 10px 90px;
   font-family: "Lato";
   font-size: calc(3px + 0.5vw);
   font-weight: 400;
@@ -1307,15 +1358,17 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0.5em;
+  margin: 0.5em 0 0.5em 0.5em;
   width: 50%;
+  height: 300px;
   background-color: #FFFFFF;
 }
 
 @media (max-width: 768px) {
   .project .project__value .shipments {
-    width: 90%;
-    margin: 0.5em;
+    width: 85%;
+    height: 20em;
+    margin: 1em 0;
   }
 }
 
@@ -1323,7 +1376,7 @@ textarea {
   font-family: "Lato";
   font-size: calc(8px + 0.5vw);
   font-weight: 700;
-  padding: 2em 5em 4em;
+  padding: 30px 70px;
   color: #767676;
 }
 
@@ -1342,14 +1395,14 @@ textarea {
   background-clip: text;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#FD5372), to(#fa8a74));
   background-image: linear-gradient(to top, #FD5372, #fa8a74);
-  margin: 1em 4em 0;
+  padding: 55px 80px 10px;
 }
 
 .project .project__value .shipments .shipments__result {
   font-family: "Lato";
   font-size: calc(3px + 0.5vw);
   font-weight: 400;
-  padding: 3.1em 6em 0.5em;
+  padding: 10px 90px;
   color: #BFBFBF;
 }
 
@@ -1372,7 +1425,8 @@ textarea {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 30%;
+  width: 300px;
+  background-color: #FFFFFF;
 }
 
 @media (max-width: 768px) {
@@ -1569,6 +1623,13 @@ textarea {
   flex-direction: row;
 }
 
+@media (max-width: 768px) {
+  .aside .footer .network {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
 .aside .footer .network .network__logo {
   margin: 0.5em;
   border: none;
@@ -1584,6 +1645,7 @@ textarea {
   color: transparent;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#705CB8), to(#BB80E3));
   background-image: linear-gradient(to top, #705CB8, #BB80E3);
+  margin: 0.5em;
 }
 
 .aside .footer .network .network__logo--vimeo {
@@ -1595,6 +1657,7 @@ textarea {
   color: transparent;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#4CC0C3), to(#63E8C9));
   background-image: linear-gradient(to top, #4CC0C3, #63E8C9);
+  margin: 0.5em;
 }
 
 .aside .footer .network .network__logo--css {
@@ -1606,6 +1669,7 @@ textarea {
   color: transparent;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#B5727A), to(#F2B496));
   background-image: linear-gradient(to top, #B5727A, #F2B496);
+  margin: 0.5em;
 }
 
 .aside .footer .network .network__logo--deviantart {
@@ -1617,6 +1681,7 @@ textarea {
   color: transparent;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#834EB9), to(#879AE7));
   background-image: linear-gradient(to top, #834EB9, #879AE7);
+  margin: 0.5em;
 }
 
 .aside .footer .network .network__logo--vk {
@@ -1628,6 +1693,7 @@ textarea {
   color: transparent;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#528EE7), to(#36CCDF));
   background-image: linear-gradient(to top, #528EE7, #36CCDF);
+  margin: 0.5em;
 }
 
 .aside .footer .network .network__logo--xing {
@@ -1639,10 +1705,10 @@ textarea {
   color: transparent;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#F59483), to(#FBD589));
   background-image: linear-gradient(to top, #F59483, #FBD589);
+  margin: 0.5em;
 }
 
 .wrap {
-  max-width: 1368px;
   margin: 0 auto;
   overflow: hidden;
   display: -webkit-box;

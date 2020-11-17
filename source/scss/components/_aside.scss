@@ -10,7 +10,8 @@
    flex-direction: column;
    align-items: flex-start;
    flex-wrap: wrap;
-   width: 30%;
+   width: 300px;
+   background-color: $white;
    
    &__buttons {
        @include head;
@@ -107,6 +108,11 @@
 
         .network {
             @include head;
+            @include mobile {
+                width: 50%;
+                margin: 0 auto;
+            }
+
             margin: 1em 1em 0;
             width: 70%;
             flex-direction: row;
@@ -119,31 +125,37 @@
                 &--radio {
                     @include logo;
                     @include gradient-purple;
+                    margin: 0.5em;
                 }
 
                 &--vimeo {
                     @include logo;
                     @include gradient-green;
+                    margin: 0.5em;
                 }
 
                 &--css {
                     @include logo;
                     @include gradient-yellow;
+                    margin: 0.5em;
                 }
 
                 &--deviantart {
                     @include logo;
                     @include gradient-blue;
+                    margin: 0.5em;
                 }
 
                 &--vk {
                     @include logo;
                     @include gradient-sky;
+                    margin: 0.5em;
                 }
 
                 &--xing {
                     @include logo;
                     @include gradient-gold;
+                    margin: 0.5em;
                 }
 
             }

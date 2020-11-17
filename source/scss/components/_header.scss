@@ -10,9 +10,6 @@
     }
     
     display: flex;
-    flex-wrap: nowrap;
-    width: 250px;
-    height: 100%;
     flex-direction: row;
     height: 4.5em;
     border-bottom: 1px solid #F1F1F1;
@@ -46,6 +43,7 @@
        border: none;
       }
 
+      flex-grow: 1;
       border-right: 1px solid #F1F1F1;
     }
 
@@ -57,9 +55,9 @@
         align-items: center;
       }
 
-      margin: 1em 9em;
-      padding: 0.3em 4em;
-      display: inline-block;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
       border: 1px solid #F1F1F1;
       border-radius: 30px;
     }
@@ -142,6 +140,9 @@
         overflow: scroll;
         
       }
+
+      flex-grow: 1;
+      justify-content: space-between;
       max-width: 90%;
       text-align: left;
       flex-wrap: nowrap;
@@ -171,12 +172,9 @@
     .header__button{
       border: none;
       margin: 1em;
+      color: $soft_red;
+      @include alias;
       background: $white;
-
-      .button__text {
-        @include gradient;
-        @include alias;
-      }
     }
     
   }
